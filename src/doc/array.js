@@ -19,15 +19,15 @@ function demo() {
 let a = '3[cd]2[zh]'
 a = '3[a2[c]]'
 function app(str) {
-    let stack = []; // 存储字符串的栈
+    let stack = []; // 存储字符串的栈  3[a2[c
     for (let i = 0; i < str.length; i++) {
         let cur = str[i];
         if (cur !== ']') {
             stack.push(cur);
         } else { // 弹出
             let count = 0;
-            let loopStr = [];
-            let popStr = '';
+            let loopStr = []; 
+            let popStr = '';  // c
             while ((popStr = stack.pop()) !== '[') {
                 loopStr.unshift(popStr);
             }
